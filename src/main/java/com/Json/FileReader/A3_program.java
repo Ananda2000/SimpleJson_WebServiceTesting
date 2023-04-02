@@ -2,15 +2,20 @@
 
 package com.Json.FileReader;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Set;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.restassured.path.json.JsonPath;
 
@@ -19,7 +24,11 @@ public class A3_program
 	@Test
 	public void JsonArray() throws IOException
 	{
-		byte[] String3 = Files.readAllBytes(Paths.get("JsonFiles/3thr.json"));
+		
+		
+		
+	byte[] String3 = Files.readAllBytes(Paths.get("JsonFiles/3thr.json"));
+		
 		String s3 = new String(String3);		
 		JsonPath jsp3 = new JsonPath(s3);
 		
@@ -35,7 +44,7 @@ public class A3_program
 		System.out.println(aa.get(0)+"--"+ab.get(0));
 		Assert.assertEquals(aa, ab,"Arraylist is not matching");
 		
-		
+	
 	}
 	
 
