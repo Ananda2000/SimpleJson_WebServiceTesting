@@ -1,0 +1,12 @@
+{
+"products":[
+			{"Name":"guru",
+				"Village":"kethaganahalli",
+				"language":"Kannda"
+			},
+			{"Name":"guru1",
+			"Village":"kethaganahalli1",
+			"language":"Kannda1"
+			}
+		   ]
+}
