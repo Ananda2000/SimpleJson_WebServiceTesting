@@ -1,9 +1,8 @@
-package post_CallMethod;
+package zz_getCall;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.testng.annotations.Test;
 
@@ -19,7 +18,7 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 
-public class First_readingResposneCodeAndBody
+public class Getcall_1 
 {
 	@Test
 	public void firstResponseBody() throws JsonParseException, JsonMappingException, IOException
@@ -66,5 +65,6 @@ public class First_readingResposneCodeAndBody
 		System.out.println("--------------- THE RESPONSE TIME IS ----------------");
 		//System.out.println(resp.ti);
 	}
+
 
 }

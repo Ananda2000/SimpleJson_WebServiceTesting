@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.Map;
 
 import org.testng.annotations.Test;
 
@@ -25,10 +26,16 @@ public class A2_Program
 		
 		VillagePojoclass vilpj = new VillagePojoclass();
 		vilpj = objmp.readValue(fl, VillagePojoclass.class);
-		
+	
 		System.out.println("Name--"+vilpj.getName());
 		System.out.println("village --"+vilpj.getLanguage());
 		System.out.println("language --"+vilpj.getVillage());
+	
+		/*Map<String, String> map123 = objmp.readValue(flread, Map.class);
+		for (Map.Entry<String, String> iterab998 : map123.entrySet()) 
+		{
+			System.out.println(iterab998.getKey()+"-----"+iterab998.getValue());
+		}*/
 	}
 
 }
