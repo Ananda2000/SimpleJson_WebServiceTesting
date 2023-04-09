@@ -26,7 +26,7 @@ public class A1_program
 	//JsonPath jsp = new JsonPath(ss);
 	//System.out.println(jsp.get("Name"));
 	 vpj = objmap.readValue(ss, VillagePojoclass.class);
-	
+	System.out.println(vpj);
 	System.out.println(vpj.getName());
 	System.out.println(vpj.getLanguage());
 	System.out.println(vpj.getVillage());
