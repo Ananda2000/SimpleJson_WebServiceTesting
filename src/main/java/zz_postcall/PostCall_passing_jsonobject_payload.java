@@ -25,14 +25,15 @@ public class PostCall_passing_jsonobject_payload
 		ObjectMapper objmap11 = new ObjectMapper();
 		File fl123 = new File("JsonFiles/postcall.json");
 		
+		// HERE WE ARE CONVERTING JSON DATA FROM FILE TO JAVA OBJECT ,, DESERIALIZATION DIERECTLY FROM JSON FILE
 		BookingIdPostcall_response bookpost = objmap11.readValue(fl123,BookingIdPostcall_response.class );
 		
-		RestAssured.baseURI="https://restful-booker.herokuapp.com/booking";
+		RestAssured.baseURI="https://restful-booker.herokuapp.com";
 		RequestSpecification requestspec = RestAssured.given();
 		requestspec.contentType(ContentType.JSON);
 		//HERE WE ARE PASSING REQUEST BODY AS JAVA OBJECT... DESERIALIZED OBJECT..
 		requestspec.body(bookpost);
-		Response resp = requestspec.post();
+		Response resp = requestspec.post("/booking");
 		
 		System.out.println(resp.getStatusCode());
 		int statusCode = resp.getStatusCode();
