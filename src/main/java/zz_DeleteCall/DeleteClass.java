@@ -25,7 +25,7 @@ public class DeleteClass
 		String cookiesss=Authentication_TokenGeneration.Auth_tokenGeneration();
 		
 		requsp.contentType(ContentType.JSON);
-		requsp.header("Cookie",cookiesss);
+		requsp.header("Cookie",cookiesss).pa
 		Response respdele = requsp.delete();
 		
 		String stttt= respdele.getBody().asString();
