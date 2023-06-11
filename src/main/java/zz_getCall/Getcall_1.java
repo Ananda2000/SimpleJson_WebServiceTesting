@@ -26,8 +26,10 @@ public class Getcall_1
 
 		ObjectMapper objmpr = new ObjectMapper();
 		RestAssured.baseURI="https://restful-booker.herokuapp.com";
+		
 		RequestSpecification request = RestAssured.given();
 		Response resp = request.get("/booking");
+	
 		System.out.println(resp.getStatusCode());
 		ResponseBody respbody = resp.getBody();
 		String ss = respbody.asString();
@@ -65,6 +67,7 @@ public class Getcall_1
 		System.out.println("--------------- THE RESPONSE TIME IS ----------------");
 		//System.out.println(resp.ti);
 	}
+
 
 
 }
