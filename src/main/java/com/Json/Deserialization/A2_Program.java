@@ -23,6 +23,7 @@ public class A2_Program
 		ObjectMapper objmp = new ObjectMapper();
 		File fl = new File("JsonFiles/one1.json");
 		FileReader flread = new FileReader(fl);
+	
 		
 		VillagePojoclass vilpj = new VillagePojoclass();
 		vilpj = objmp.readValue(fl, VillagePojoclass.class);
